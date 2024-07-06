@@ -1,0 +1,26 @@
+#Pre-requis
+#Active the port 80 in security group of the instace for allow http request
+
+#Install et start httpd (daemon http)
+
+sudo yum -y install httpd 
+sudo systemctl start httpd
+
+#Install autoactivation of php 
+sudo yum -y install php php-cli
+
+#Write or place your code in /var/www/html/ 
+
+cd /var/www/html
+
+#In case you write your code in linux
+sudo nano index.php
+sudo nano help.php
+
+#In case you place your code use ftp with moba xterm it's simply and fast
+
+#Restart le httpd 
+sudo systemctl restart httpd
+
+#Journaliser le tout dans mon journal en background
+sudo tail -f -n 1 /var/log/php-fpm/www-error.log >> /home/ec2-user/journal-php.log &
