@@ -1,8 +1,4 @@
-<?php
-    // Ecrit le log dans mon fichier
-    error_log("Elkach, go to the help page...");
 
-?>
 
 <!DOCTYPE html>
 <html>
@@ -32,3 +28,10 @@
         <h1>Do you want any help?</h1>
     </div>
 </body>
+
+<?php
+
+    error_log("Elkach, go to the help page...");
+
+?>
+
